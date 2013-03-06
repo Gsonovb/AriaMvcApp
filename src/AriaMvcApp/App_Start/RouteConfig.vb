@@ -10,9 +10,9 @@ Public Class RouteConfig
         routes.IgnoreRoute("{resource}.axd/{*pathInfo}")
 
         routes.MapRoute( _
-            name:="Default", _
-            url:="{controller}/{action}/{id}", _
-            defaults:=New With {.controller = "Home", .action = "Index", .id = UrlParameter.Optional} _
+            name:="Download", _
+            url:="Download/{action}/{*path}", _
+            defaults:=New With {.controller = "Download", .action = "Index", .path = UrlParameter.Optional} _
         )
     End Sub
 End Class

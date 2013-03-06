@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Microsoft.AspNet.Mvc.FixedDisplayModes</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>Microsoft ASP.NET MVC Fixed DisplayModes</title>
     <authors>Microsoft</authors>
     <owners>Microsoft</owners>
@@ -15,6 +15,8 @@
     <dependencies>
       <dependency id="Microsoft.AspNet.Mvc" version="[4.0.20710.0, 4.1)" />
     </dependencies>
-    <references />
+    <references>
+      <reference file="Microsoft.Web.Mvc.FixedDisplayModes.dll" />
+    </references>
   </metadata>
 </package>
