@@ -223,6 +223,7 @@
     <Content Include="js\jquery.Storage.js" />
     <Content Include="js\mustache.js" />
     <Content Include="js\yaaw.js" />
+    <None Include="My Project\PublishProfiles\file.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

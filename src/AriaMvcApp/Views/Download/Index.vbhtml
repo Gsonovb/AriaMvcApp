@@ -39,7 +39,7 @@ End Code
 
 
 
-    <h2>查看</h2>
+    <h2>View</h2>
 
     <div>
         <a href="~/index.html">Return Back </a>
