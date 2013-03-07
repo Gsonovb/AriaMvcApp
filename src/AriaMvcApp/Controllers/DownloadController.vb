@@ -161,7 +161,7 @@ Public Class DownloadController
 
 
                 If Me.IsDeleteToRecycleBin Then
-                    My.Computer.FileSystem.DeleteDirectory(cpath, FileIO.DeleteDirectoryOption.DeleteAllContents, FileIO.RecycleOption.SendToRecycleBin)
+                    My.Computer.FileSystem.DeleteDirectory(cpath, FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.SendToRecycleBin)
 
                 Else
 
@@ -186,20 +186,7 @@ Public Class DownloadController
         Return "(?)"
     End Function
 
-    ''
-    '' POST: /Download/Delete/5
-
-    '<HttpPost()> _
-    'Function Delete(ByVal path As String, ByVal collection As FormCollection) As ActionResult
-    '    Try
-    '        ' TODO: Add delete logic here
-
-    '        Return RedirectToAction("Index")
-    '    Catch
-    '        Return View()
-    '    End Try
-    'End Function
-
+ 
 
 
     Private Function GetContentType(ext As String) As String

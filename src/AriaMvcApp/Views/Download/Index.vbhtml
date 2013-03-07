@@ -61,18 +61,23 @@ End Code
     <div id="list">
 
 
-
-        @grid.GetHtml(
+       @grid.GetHtml(
             tableStyle:="grid",
             headerStyle:="head",
             alternatingRowStyle:="alt",
             columns:=grid.Columns(
-            grid.Column("Name", canSort:=True, format:=@@<span>@Html.ActionLink(item.Name, "Index", New With {.path = item.Path})</span>),
+            grid.Column("Name", canSort:=True, format:=@@<span>@If not String.IsNullOrWhiteSpace(item.Size) Then 
+                                                                   @<a href="@("/downloads" & item.Path)">@item.Name</a>
+                                                                Else 
+                                                                    @Html.ActionLink(item.Name, "Index", New With {.path = item.Path})
+                                                                end if</span>),
             grid.Column("Size", canSort:=True, format:=@@<span>@item.Size</span>),
             grid.Column("Creation Time", canSort:=True, format:=@@<span>@item.CreationTime</span>),
             grid.Column("Delete", canSort:=False, format:=@@<strong>@If Not item.Name=".." Then
                                                                         @Ajax.ActionLink("Delete", "Delete", New With {.path = item.Path}, New AjaxOptions With {.Confirm = "Are You Sure To Delete This?", .UpdateTargetId = "txtresult", .OnComplete = "ShowToDo()"})
                                                                     End If </strong>)))
+
+       
 
        
     </div>
